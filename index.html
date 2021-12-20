@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아바이브로스</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="jquery/jquery.bxslider.css">
+    <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="jquery/jquery.bxslider.js"></script>
+    <script>
+        $(function () {
+            $('.main-menu, .sub-bg').hover(function () {
+                $('.sub-menu', ).stop().slideDown(500);
+                $('.sub-bg', ).stop().slideDown(500);
+            }, function () {
+                $('.sub-menu').stop().slideUp(500);
+                $('.sub-bg').stop().slideUp(500);
+            });
+            $('.slide').bxSlider({
+                auto: true,
+                adaptiveHeight: true
+            });
+            $('.best-list').bxSlider({
+                auto: true,
+                moveSlides: 3,
+                minSlides: 3,
+                maxSlides: 3,
+                slideMargin: 20,
+                slideWidth: 255,
+                adaptiveHeight: true,
+            });
+            $('.title-1').click(function () {
+                $('.cont-1').addClass('active');
+                $('.cont-1').siblings().removeClass('active')
+                $(this).addClass('act1');
+                $(this).siblings().removeClass('act1')
+            })
+            $('.title-2').click(function () {
+                $('.cont-2').addClass('active');
+                $('.cont-2').siblings().removeClass('active')
+                $(this).addClass('act1');
+                $(this).siblings().removeClass('act1')
+            })
+            $('.title-3').click(function () {
+                $('.cont-3').addClass('active');
+                $('.cont-3').siblings().removeClass('active')
+                $(this).addClass('act1');
+                $(this).siblings().removeClass('act1')
+            })
+            $('.title a').click(function () {
+                return false;
+            })
+            $('.heart').click(function () {
+                $(this).removeClass('on')
+                $(this).siblings('.heart-1').addClass('on')
+            })
+            $('.heart-1').click(function () {
+                $(this).removeClass('on')
+                $(this).siblings('.heart').addClass('on')
+            })
+            $('.put').click(function () {
+                $(this).siblings('.put-1').addClass('on')
+                $(this).removeClass('on')
+            })
+            $('.put-1').click(function () {
+                $(this).siblings('.put').addClass('on')
+                $(this).removeClass('on')
+            })
+            $('.quick').click(function () {
+                $(this).stop().toggleClass('click')
+                $('.quick-menu').stop().slideToggle()
+            })
+            $(window).scroll(function () {
+                var location = ($(window).scrollTop().toFixed(0))
+                $(".scr-top").text(location)
+                if (location >= 500) {
+                    $(".quick").css({
+                        top: "40%", right:"5%"
+                    })
+                } else {
+                    $(".quick").css({
+                        right: "-10%"
+                    })
+
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="Wrap">
+        <header>
+            <div class="inner fix">
+                <div class="logo">
+                    <h1><a href="#"><img src="images/로고.png" alt="logo"></a></h1>
+                </div>
+                <ul class="icon">
+                    <li><a href="#">
+                            <img src="images/로그인 아이콘.png" alt="log-in">
+                        </a><a href="#" class="icon-2">
+                            <img src="images/로그인 아이콘 호버.png" alt="log-in">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="images/장바구니 아이콘.png" alt="장바구니">
+                        </a><a href="#" class="icon-2">
+                            <img src="images/장바구니 아이콘 호버.png" alt="장바구니">
+                        </a>
+                    </li>
+                </ul>
+                <div class="top-search">
+                    <p class="search">
+                        <input type="search" placeholder="검색어를 입력하세요.">
+                        <button><img src="images/검색 아이콘.png" alt="검색"></button>
+                        <button class="search-2"><img src="images/검색 아이콘 호버.png" alt="검색"></button>
+                    </p>
+                </div>
+                <nav>
+                    <ul class="main-menu fix">
+                        <li><a href="#">SEASON</a>
+                            <div class="sub-menu">
+                                <a href="#">-</a>
+                            </div>
+                        </li>
+                        <li><a href="#">LONG<br>BOARDS</a>
+                            <div class="sub-menu">
+                                <a href="#">Deck</a>
+                                <a href="#">Truck</a>
+                                <a href="#">Wheels</a>
+                            </div>
+                        </li>
+                        <li><a href="#">SKATE<br>BOARDS</a>
+                            <div class="sub-menu">
+                                <a href="#">Deck</a>
+                                <a href="#">Truck</a>
+                                <a href="#">Wheels</a>
+                            </div>
+                        </li>
+                        <li><a href="#">CRUISER<br>BOARDS</a>
+                            <div class="sub-menu">
+                                <a href="#">Complete</a>
+                            </div>
+                        </li>
+                        <li><a href="#">PARTS</a>
+                            <div class="sub-menu">
+                                <a href="#">Bearings</a>
+                                <a href="#">Griptape</a>
+                                <a href="#">Hardware</a>
+                                <a href="#">Riser</a>
+                                <a href="#">Bushings</a>
+                                <a href="#">Tools</a>
+                                <a href="#">ETC</a>
+                            </div>
+                        </li>
+                        <li><a href="#">PROTECTOR</a>
+                            <div class="sub-menu">
+                                <a href="#">-</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="sub-bg"></div>
+        <section class="slide">
+            <div><a href="#"><img src="images/슬라이드 1.png" alt="slide"></a></div>
+            <div><a href="#"><img src="images/슬라이드 2.png" alt="slide"></a></div>
+            <div><a href="#"><img src="images/슬라이드 3.png" alt="slide"></a></div>
+        </section>
+        <section class="tab">
+            <div class="inner">
+                <div class="title">
+                    <a href="#none" class="title-1 act1">DECK</a>
+                    <a href="#none" class="title-2">TRUCK</a>
+                    <a href="#none" class="title-3">WHEELS</a>
+                </div>
+                <div class="tab-cont">
+                    <div class="cont-1 active">
+                        <div class="cont-01"><a href="#none"><img src="images/댄싱 유이 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>DANCING YUI </h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                        <div class="cont-02"><a href="#none"><img src="images/판테온 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>PANTHEON</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                        <div class="cont-03"><a href="#none"><img src="images/롱보드래리 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>LONGBOARD LARRY</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                        <div class="cont-04"><a href="#none"><img src="images/로디드 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>LOADED</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont-2">
+                        <div class="cont-01"><a href="#none"><img src="images/베어 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>BEAR TRUCK</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                        <div class="cont-02"><a href="#none"><img src="images/패리스 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>PARIS TRUCK</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                        <div class="cont-03"><a href="#none"><img src="images/칼리버 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>CALIBER TRUCK</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                        <div class="cont-04"><a href="#none"><img src="images/란달 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>RANDAL TRUCK</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont-3">
+                        <div class="cont-01"><a href="#none"><img src="images/오랑가탕 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>ORANGGATANG</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                        <div class="cont-02"><a href="#none"><img src="images/혹스 휠 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>HAWGS</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                        <div class="cont-03"><a href="#none"><img src="images/리멤버 더피위 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>REMEMBER PEE WEE</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                        <div class="cont-04"><a href="#none"><img src="images/클라우드라이드 타이틀 사진.png" alt="title"></a>
+                            <div class="title-bg">
+                                <img src="images/타이틀 배경.png" alt="background">
+                                <h2>CLOUD RIDE</h2>
+                                <span class="opacity"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="best">
+            <div class="inner">
+                <div class="best-title">
+                    <h1>BEST - ITEM</h1>
+                    <h2>많은 보더 님들의<br>선택을 받은 상품입니다.</h2>
+                </div>
+            </div>
+            <div class="best-bg">
+                <div class="best-box">
+                    <ul class="best-list">
+                        <li class="best-1"><a href="#none"><img src="images/베스트 1 사진.png" alt="best"></a>
+                            <div>
+                                <h3>Dancing Yui</h3>
+                                <h4>Dada '46' Carbon Edition</h4>
+                                <h5>259,000원</h5>
+                            </div>
+                        </li>
+                        <li class="best-2"><a href="#none"><img src="images/베스트 2 사진.png" alt="best"></a>
+                            <div>
+                                <h3>Pepper Boards</h3>
+                                <h4>Bastet '44'</h4>
+                                <h5>339,000원</h5>
+                            </div>
+                        </li>
+                        <li class="best-3"><a href="#none"><img src="images/베스트 3 사진.png" alt="best"></a>
+                            <div>
+                                <h3>Longboard Larry</h3>
+                                <h4>Old School Dance '59'</h4>
+                                <h5>269,000원</h5>
+                            </div>
+                        </li>
+                        <li class="best-4"><a href="#none"><img src="images/베스트 4 사진.png" alt="best"></a>
+                            <div>
+                                <h3>Pantheon</h3>
+                                <h4>Quest '37.13'</h4>
+                                <h5>260.000원</h5>
+                            </div>
+                        </li>
+                        <li class="best-5"><a href="#none"><img src="images/베스트 5 사진.png" alt="best"></a>
+                            <div>
+                                <h3>Loaded</h3>
+                                <h4>Bhangra V2</h4>
+                                <h5>370.000원</h5>
+                            </div>
+                        </li>
+                        <li class="best-6"><a href="#none"><img src="images/베스트 6 사진.png" alt="best"></a>
+                            <div>
+                                <h3>Landyachtz</h3>
+                                <h4>Tony Danza Gold'40'</h4>
+                                <h5>335.000원</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="new">
+            <div class="inner fix">
+                <h1>NEW PRODUCT</h1>
+                <ul class="new-list">
+                    <li class="new-1"><a href="#none">
+                            <img src="images/뉴 1 사진.png" alt="new">
+                        </a>
+                        <div class="new-item">
+                            <h3>Street Plant</h3>
+                            <h4>City Pusher '9.5'</h4>
+                            <h5>98,000원</h5>
+                        </div>
+                        <span class="mask"></span>
+                        <span class="heart on"><img src="images/찜.png" alt="heart"></span>
+                        <span class="heart-1"><img src="images/찜 클릭.png" alt="heart"></span>
+                        <span class="put on"><img src="images/담기.png" alt="put"></span>
+                        <span class="put-1"><img src="images/담기 호버.png" alt="put"></span>
+                    </li>
+                    <li class="new-2"><a href="#none">
+                            <img src="images/뉴 2 사진.png" alt="new">
+                        </a>
+                        <div class="new-item">
+                            <h3>Street Plant</h3>
+                            <h4>Monster Plant OG Street Axe '9.5'</h4>
+                            <h5>98,000원</h5>
+                        </div>
+                        <span class="mask"></span>
+                        <span class="heart on"><img src="images/찜.png" alt="heart"></span>
+                        <span class="heart-1"><img src="images/찜 클릭.png" alt="heart"></span>
+                        <span class="put on"><img src="images/담기.png" alt="put"></span>
+                        <span class="put-1"><img src="images/담기 호버.png" alt="put"></span>
+                    </li>
+                    <li class="new-3"><a href="#none">
+                            <img src="images/뉴 3 사진.png" alt="new">
+                        </a>
+                        <div class="new-item">
+                            <h3>WKND Babes</h3>
+                            <h4>Kim '8.1'</h4>
+                            <h5>98,000원</h5>
+                        </div>
+                        <span class="mask"></span>
+                        <span class="heart on"><img src="images/찜.png" alt="heart"></span>
+                        <span class="heart-1"><img src="images/찜 클릭.png" alt="heart"></span>
+                        <span class="put on"><img src="images/담기.png" alt="put"></span>
+                        <span class="put-1"><img src="images/담기 호버.png" alt="put"></span>
+                    </li>
+                    <li class="new-4"><a href="#none">
+                            <img src="images/뉴 4 사진.png" alt="new">
+                        </a>
+                        <div class="new-item">
+                            <h3>WKND Babes</h3>
+                            <h4>Laney '8.5'</h4>
+                            <h5>98,000원</h5>
+                        </div>
+                        <span class="mask"></span>
+                        <span class="heart on"><img src="images/찜.png" alt="heart"></span>
+                        <span class="heart-1"><img src="images/찜 클릭.png" alt="heart"></span>
+                        <span class="put on"><img src="images/담기.png" alt="put"></span>
+                        <span class="put-1"><img src="images/담기 호버.png" alt="put"></span>
+                    </li>
+                    <li class="new-5"><a href="#none">
+                            <img src="images/뉴 5 사진.png" alt="new">
+                        </a>
+                        <div class="new-item">
+                            <h3>Loaded</h3>
+                            <h4>Tarab '47'</h4>
+                            <h5>360,000원</h5>
+                        </div>
+                        <span class="mask"></span>
+                        <span class="heart on"><img src="images/찜.png" alt="heart"></span>
+                        <span class="heart-1"><img src="images/찜 클릭.png" alt="heart"></span>
+                        <span class="put on"><img src="images/담기.png" alt="put"></span>
+                        <span class="put-1"><img src="images/담기 호버.png" alt="put"></span>
+                    </li>
+                    <li class="new-6"><a href="#none">
+                            <img src="images/뉴 6 사진.png" alt="new">
+                        </a>
+                        <div class="new-item">
+                            <h3>Dancing Yui</h3>
+                            <h4>Dia '46', '44'</h4>
+                            <h5>229,000원</h5>
+                        </div>
+                        <span class="mask"></span>
+                        <span class="heart on"><img src="images/찜.png" alt="heart"></span>
+                        <span class="heart-1"><img src="images/찜 클릭.png" alt="heart"></span>
+                        <span class="put on"><img src="images/담기.png" alt="put"></span>
+                        <span class="put-1"><img src="images/담기 호버.png" alt="put"></span>
+                    </li>
+                    <li class="new-7"><a href="#none">
+                            <img src="images/뉴 7 사진.png" alt="new">
+                        </a>
+                        <div class="new-item">
+                            <h3>Classic Longboards</h3>
+                            <h4>TIPHERETH '46'</h4>
+                            <h5>204,000원</h5>
+                        </div>
+                        <span class="mask"></span>
+                        <span class="heart on"><img src="images/찜.png" alt="heart"></span>
+                        <span class="heart-1"><img src="images/찜 클릭.png" alt="heart"></span>
+                        <span class="put on"><img src="images/담기.png" alt="put"></span>
+                        <span class="put-1"><img src="images/담기 호버.png" alt="put"></span>
+                    </li>
+                    <li class="new-8"><a href="#none">
+                            <img src="images/뉴 8 사진.png" alt="new">
+                        </a>
+                        <div class="new-item">
+                            <h3>Longboard Larry</h3>
+                            <h4>Corocodile '47'</h4>
+                            <h5>289,000원</h5>
+                        </div>
+                        <span class="mask"></span>
+                        <span class="heart on"><img src="images/찜.png" alt="heart"></span>
+                        <span class="heart-1"><img src="images/찜 클릭.png" alt="heart"></span>
+                        <span class="put on"><img src="images/담기.png" alt="put"></span>
+                        <span class="put-1"><img src="images/담기 호버.png" alt="put"></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="you-tube">
+            <div class="inner fix">
+                <div class="you-tube-title">
+                    <h1>YOU TUBE</h1>
+                    <h2>보드의 관리 TIP 부터<br>댄싱,트릭 영상 까지 한곳에!</h2>
+                    <div class="you-tube-go">
+                        <a href="https://www.youtube.com/c/AbaiBrosshop" target="_new">
+                            <h5>YOU TUBE 더보기</h5>
+                            <img src="images/유튜브 화살표.png" alt="arrow">
+                        </a>
+                    </div>
+                    <div class="you-tube-link">
+                        <iframe width="840" height="380" src="https://www.youtube.com/embed/vSdMriOPbXM"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="you-tube-bg"></div>
+        </section>
+        <section class="instar">
+            <div class="inner fix">
+                <h1>INSTARGRAM</h1>
+                <ul class="instar-list">
+                    <li class="instar-1"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 1.png" alt="instar"></a></li>
+                    <li class="instar-2"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 2.png" alt="instar"></a></li>
+                    <li class="instar-3"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 3.png" alt="instar"></a></li>
+                    <li class="instar-4"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 4.png" alt="instar"></a></li>
+                    <li class="instar-5"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 5.png" alt="instar"></a></li>
+                    <li class="instar-6"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 6.png" alt="instar"></a></li>
+                    <li class="instar-7"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 7.png" alt="instar"></a></li>
+                    <li class="instar-8"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 8.png" alt="instar"></a></li>
+                    <li class="instar-9"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 9.png" alt="instar"></a></li>
+                    <li class="instar-10"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 10.png" alt="instar"></a></li>
+                    <li class="instar-11"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 11.png" alt="instar"></a></li>
+                    <li class="instar-12"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 12.png" alt="instar"></a></li>
+                    <li class="instar-13"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 13.png" alt="instar"></a></li>
+                    <li class="instar-14"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 14.png" alt="instar"></a></li>
+                    <li class="instar-15"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 15.png" alt="instar"></a></li>
+                    <li class="instar-16"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 16.png" alt="instar"></a></li>
+                    <li class="instar-17"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 17.png" alt="instar"></a></li>
+                    <li class="instar-18"><a
+                            href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                            target="_new"><img src="images/인스타 18.png" alt="instar"></a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="review">
+            <div class="inner fix">
+                <h1>REVIEW</h1>
+                <div class="event">
+                    <img src="images/배너1.png" alt="event">
+                </div>
+                <ul>
+                    <li class="review1">
+                        <a href="#none"><img src="images/리뷰 1.png" alt="review"></a>
+                        <img class="review-img" src="images/리뷰 1-1.png" alt="review">
+                        <h2>Dancing Yui</h2>
+                        <h3>dada'46' + Geatbea(Gray) + Hawgs(Mint)</h3>
+                        <h4>flqbdj95</h4>
+                        <h5>10일날 시켰는데 14일에 배송 왔어요 배송 빨라서 좋습니다!!</h5>
+                        <h6>★★★★☆</h6>
+                    </li>
+                    <li class="review2">
+                        <a href="#none"><img src="images/리뷰 2.png" alt="review"></a>
+                        <img class="review-img" src="images/리뷰 2-1.png" alt="review">
+                        <h2>Loaded</h2>
+                        <h3>Bhangra v1</h3>
+                        <h4>slrspdla 88</h4>
+                        <h5>역시 데크는 로디드 방그라가 최고입니다.</h5>
+                        <h6>★★★★★</h6>
+                    </li>
+                    <li class="review3">
+                        <a href="#none"><img src="images/리뷰 3.png" alt="review"></a>
+                        <img class="review-img" src="images/리뷰 3-1.png" alt="review">
+                        <h2>Pantheon</h2>
+                        <h3>Thandava '45.3'</h3>
+                        <h4>qhemtkwnjjjjj</h4>
+                        <h5>아무것도 모르고 저가형 브랜드 사서 타다가 파손 나고 찾아보다가 판테온으로 삿는데 정말 좋아요</h5>
+                        <h6>★★★★☆</h6>
+                    </li>
+                    <li class="review4">
+                        <a href="#none"><img src="images/리뷰 4.png" alt="review"></a>
+                        <img class="review-img" src="images/리뷰 4-1.png" alt="review">
+                        <h2>Landyachtz</h2>
+                        <h3>Stratus'46' + Paris V2(Matt Black) + Oranggatang</h3>
+                        <h4>skehqhem315</h4>
+                        <h5>그래픽이 홀로그램으로 되있는거 너무 이쁩니다 맘에 쏙들어요</h5>
+                        <h6>★★★★★</h6>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-bg">
+                <div class="inner fix">
+                    <div class="footer-left">
+                        <h2><a href="https://www.instagram.com/explore/tags/%EC%95%84%EB%B0%94%EC%9D%B4%EB%B8%8C%EB%A1%9C%EC%8A%A4%EB%B3%B4%EB%93%9C%EC%83%B5/"
+                                target="_new">
+                                abai bros <span>보드샵 공식 인스타그램 바로가기</span></a></h2>
+                        <p>COMPANY abai bros&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            대표이사 유 연&nbsp;&nbsp;&nbsp;&nbsp;
+                            전화 : 010-4224-2020
+                        </p>
+                        <p>ADDRESS : 강원 속초시 노리5길 37 (노학동) 아바이브로스 보드샵&nbsp;&nbsp;&nbsp;&nbsp;E-MAIL : yy2255@naver.com</p>
+                        <p>개인정보관리책임자 유연&nbsp;&nbsp;&nbsp;&nbsp;
+                            사업자등록번호 : 782-03-00025&nbsp;&nbsp;&nbsp;&nbsp;
+                            통신판매업 신고번호 : 제2015-강원속초-0039호
+                        </p>
+                    </div>
+                    <div class="footer-center">
+                        <h3>회사소개</h3>
+                        <h3>이용약관</h3>
+                        <h3>개인정보</h3>
+                        <h3>문의하기</h3> 
+                    </div>
+                    <div class="footer-right">
+                        <h3>무통장입금</h3>
+                        <p>신한은행 : 110-223-157009 유연</p>
+                        <p>안전구매(에스크로)서비스 가맹점</p>
+                        <h4><img src="images/안전거래.png" alt="trade"></h4>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="quick">
+            <span></span>
+            <span></span>
+            <div class="quick-menu">
+                <a href="#Wrap"><img src="images/맨위로 아이콘.png" alt="icon"></a>
+                <h4>TOP</h4>
+                <a href="#none"><img src="images/배송 조회.png" alt="icon"></a>
+                <h4>배송 조회</h4>
+                <a href="#none"><img src="images/조립 문의.png" alt="icon"></a>
+                <h4>조립 문의</h4>
+                <a href="#none"><img src="images/찜 목록.png" alt="icon"></a>
+                <h4>찜 목록</h4>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

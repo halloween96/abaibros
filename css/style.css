@@ -1,0 +1,668 @@
+@charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul, li, ol{
+    list-style: none;
+}
+.fix,
+.fix::before,
+.fix::after{
+    display: block;
+    clear: both;
+    content: '';
+    zoom: 1;
+}
+#Wrap{
+    width: 100%;
+    font-family:  Pretendard;
+    padding-top: 80px;
+}
+.inner{
+    width: 1240px;
+    margin: 0 auto;
+}
+section{
+    margin-bottom: 60px;
+}
+section h1{
+    font-size: 36px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.slide div img{width: 100%;}
+header{
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: #fff;
+    width: 100%;
+}
+header .inner{
+    position: relative;
+}
+header .logo{
+    position: absolute;
+    top: 15px;
+}
+header .icon{
+    float: right;
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+header .icon li{
+    float: left;
+    width: 40px;
+}
+header .icon .icon-2{
+    display: none;
+}
+header .icon li:hover .icon-2{
+    display: block;
+}
+header .icon li:hover>a{
+    display: none;
+}
+header .top-search{
+    position: absolute;
+    top: 40px;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+header .search{
+    border: 1px solid rgb(194, 194, 194);
+    width: 228px;
+    height: 28px;
+    border-radius: 14px;
+    float: left;
+}
+header .search input{
+    border: none;
+    height: 28px;
+    width: 160px;
+    display: block;
+    float: left;
+    position: absolute;
+    left: 15px;
+}
+input:focus{
+    outline: none;
+}
+header .search input::placeholder{
+    font-size: 15px;
+    color: #999;
+}
+header .search button{
+    display: block;
+    border: none;
+    height: 28px;
+    position: absolute;
+    right: 15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+header .search button img{
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 1px;
+    left: -25px;
+}
+header .search .search-2{
+    border: none;
+    float: left;
+    height: 28px;
+    display: none;
+    position: absolute;
+    top: 1px;
+    right: 15px;
+}
+header .search:hover .search-2{
+    display: block;
+}
+nav{
+    height: 80px; 
+}
+nav ul{
+    position: absolute;
+    top: 30px;
+    left: 45%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+nav ul li{
+    float: left;
+    width: 95px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+}
+nav ul li a{
+    display: block;
+    width: 95px;
+}
+nav ul li .sub-menu{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: none;
+}
+nav ul li .sub-menu a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+nav ul li .sub-menu a:hover{
+    background-color: rgba(230, 230, 230, 0.5);
+}
+nav ul li a:hover{
+    text-shadow: 2px 1px rgb(26, 28, 33);
+}
+.sub-bg{
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    height: 280px;
+    background-color: rgba(230, 230, 230, 0.5);
+    z-index: 10;
+    display: none;
+}
+.title{
+    text-align: center;
+}
+.title a{
+    display: inline-block;
+    margin:  20px 30px;
+    border: 1px solid rgb(194, 194, 194);
+    width: 188px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight:normal;
+}
+.title a.act1{
+    background-color: rgb(26, 28, 33);
+    color: #fff;
+}
+.title a:hover{
+    background-color: rgb(26, 28, 33);
+    color: #fff;
+}
+.tab-cont{
+    height: 535px;
+    position: relative;
+}
+.tab-cont>div{
+    display: none;
+}
+.opacity{
+    width: 400px;
+    height: 33px;
+    background-color: #111;
+    display: block;
+    position: absolute;
+    bottom:3px;
+    left: 0;
+    z-index: 101;
+}
+.title-bg{
+    opacity: 0;
+}
+.tab-cont>div div:hover .title-bg{
+    opacity: 1;
+    transition: 1s;
+}
+.tab-cont>div div:hover .opacity{
+    opacity: 0;
+    width: 0;
+    transition: 1s;
+}
+.tab-cont>div h2{
+    color: #fff;
+    font-size: 26PX;
+}
+.tab-cont>div .cont-01{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.tab-cont div .cont-01 .title-bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.tab-cont>div div .title-bg h2{
+    position: absolute;
+    bottom: 5px;
+    left: 95%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+}
+.tab-cont>div .cont-02{
+    position: absolute;
+    top:0;
+    left: 420px;
+}
+.tab-cont>div .cont-02 .title-bg{
+    position: absolute;
+    bottom: 0;
+}
+.tab-cont>div .cont-03{
+    position: absolute;
+    top: 280px;
+    left: 420px;
+}
+.tab-cont>div .cont-03 .title-bg{
+    position: absolute;
+    bottom: 0;
+}
+.tab-cont>div .cont-04{
+    position: absolute;
+    top: 0;
+    left: 840px;
+}
+.tab-cont>div .cont-04 .title-bg{
+    position: absolute;
+    bottom: 0;
+}
+.tab-cont .active{
+    display: block;
+}
+.best-bg{
+    background-color: rgb(230, 230, 230);
+    width: 1580px;
+    height: 400px;
+}
+.best-box{
+    float: right;
+    margin-right: 20px;
+}
+.best-title{
+    position: relative;
+}
+.best .inner h1{
+    font-size: 60px;
+    font-weight: 800;
+    position: absolute;
+    top: 30px;
+    left: -5px;
+    z-index: 10;
+}
+.best .inner .best-title h2{
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    top: 230px;
+}
+
+.best .best-list li{
+    float: left;
+    margin: 20px 20px 0 0;
+}
+.best .best-list li div{
+    width: 255px;
+    text-align: center;
+}
+.best .best-list li h3{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.best .best-list li h4{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.best .best-list li h5{
+    font-size: 13px;
+    font-weight: 300;
+}
+.mask{
+    position: absolute;
+    width: 295px;
+    height: 295px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #111;
+    opacity: 0;
+}
+.heart{
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transform: translateX(-50%);
+    z-index: 11;
+    opacity: 0;
+    cursor: pointer;
+    display: none;
+}
+.heart-1{
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transform: translateX(-50%);
+    z-index: 11;
+    cursor: pointer;
+    display: none;
+}
+.put{
+    position: absolute;
+    top: 58%;
+    left: 65%;
+    transform: translateX(-50%);
+    z-index: 11;
+    opacity: 0;
+    display: none;
+    cursor: pointer;
+}
+.put-1{
+    display: none;
+    position: absolute;
+    top: 58%;
+    left: 65%;
+    transform: translateX(-50%);
+    z-index: 11;
+    cursor: pointer;
+}
+.on{
+    display: block;
+}
+.new-item{
+    margin-bottom: 20px;
+}
+.new-list li{
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+.new-list li:hover .mask{
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.new-list li:hover .heart{
+    opacity: 1;
+    transition: 0.5s;
+}
+.new-list li:hover .put{
+    opacity: 1;
+    transition: 0.5s;
+}
+.new-list .new-4{
+    margin-right: 0;
+}
+.new-list .new-8{
+    margin-right: 0;
+}
+.new-list li h3{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.new-list li h4{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+.new-list li h5{
+    font-size: 13px;
+    font-weight: 300;
+}
+.you-tube{
+    height: 400px;
+}
+.you-tube-bg{
+    background-color: rgb(230, 230, 230);
+    width: 1580px;
+    height: 420px;
+    float: right;
+    z-index: -1;
+}
+.you-tube-title{
+    position: relative;
+}
+.you-tube .inner .you-tube-title h1{
+    font-size: 60px;
+    font-weight: 800;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 10;
+}
+.you-tube .inner .you-tube-title h2{
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    top: 240px;
+    left: 965px;
+}
+.you-tube .inner .you-tube-title .you-tube-go{
+    position:absolute;
+    top: 325px;
+    left: 935px;
+    background-color:rgb(26, 28, 33);
+    width: 315px;
+    height: 60px;
+    border-radius: 30px;
+}
+.you-tube .inner .you-tube-title .you-tube-go h5{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 60px;
+    margin-left: 30px;
+    float: left;
+}
+.you-tube .inner .you-tube-title .you-tube-go img{
+    position: absolute;
+    top: 13px;
+    left: 270px;
+}
+.you-tube .inner .you-tube-title .you-tube-go a{
+    display: block;
+    height: 60px;
+}
+.you-tube .inner .you-tube-title .you-tube-link{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.instar-list li{
+    float: left;
+    display: block;
+    margin: 0 20px 20px 0;
+    width: 190px;
+    height: 190px;
+    overflow: hidden;
+}
+.instar-list li img{
+    transition: 0.5s;
+}
+.instar-list li:hover img{
+    transform: scale(1.2);
+}
+.instar-list .instar-6{
+    margin-right: 0;
+}
+.instar-list .instar-12{
+    margin-right: 0;
+}
+.instar-list .instar-18{
+    margin-right: 0;
+}
+.review .event{
+    margin-bottom: 40px;
+}
+.review ul{
+    display: block;
+    float: left;
+}
+.review ul li{
+    float: left;
+    display: block;
+    position: relative;
+    margin-right: 18px;
+}
+.review .inner ul .review4{
+    margin-right: 0;
+}
+.review ul li img{
+    display: block;
+}
+.review ul li .review-img{
+    margin-top: 10px;
+}
+.review ul li h2{
+    font-size: 16px;
+    position: absolute;
+    top: 310px;
+    left: 100px;
+}
+.review ul li h3{
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    top: 340px;
+    left: 100px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.review ul li h4{
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    top: 370px;
+    right: 0;
+}
+.review ul li h5{
+    font-size: 14px;
+    font-weight: 700;
+    width: 295px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    top: 400px;
+}
+.review ul li h6{
+    font-size: 14px;
+    position: absolute;
+    top: 370px;
+    left: 100px;
+}
+footer{
+    position: relative;
+}
+.footer-bg{
+    width: 100%;
+    height: 180px;
+    background-color: #111;
+}
+footer h3{
+    color: #fff;
+    font-size: 18px;
+}
+footer p{
+    font-size: 14px;
+    color: #dcdcdc;
+    padding: 5px 0;
+}
+.footer-left{
+    float: left;
+    display: block;
+}
+.footer-left h2{
+    color: #fff;
+    font-size: 32px;
+    padding: 20px 0;
+}
+.footer-left h2 span{
+    font-size: 16px;
+    color: #dcdcdc;
+}
+.footer-center{
+    display: block;
+}
+.footer-center h3{
+    float: left;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+.footer-right{
+    float: left;
+    display: block;
+    margin: 30px 0 0 40px;
+}
+.footer-right p{
+    padding: 10px 0;
+}
+.footer-right h4{
+    position: absolute;
+    top: 80px;
+    right: 330px;
+}
+.quick{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 2px solid rgb(26, 28, 33);
+    position: fixed;
+    top: 80%;
+    right: 5%;
+    cursor: pointer;
+    transition: all 1s;
+}
+.quick.click{
+    background-color: rgb(26, 28, 33);
+}
+.quick span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 30px;
+    height: 4px;
+    background-color: rgb(26, 28, 33);
+    transition: all 0.5s;
+}
+.quick span:nth-child(1){
+    transform: rotate(90deg);
+}
+.quick.click span:nth-child(1){
+    transform: rotate(315deg);
+    background-color: #fff;
+}
+.quick.click span:nth-child(2){
+    transform: rotate(225deg);
+    background-color: #fff;
+}
+.quick-menu{
+    display: none;
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 70px;
+    text-align: center;
+}
+.quick-menu a{
+    padding: 5px 0;
+}
